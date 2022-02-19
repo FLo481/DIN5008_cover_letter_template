@@ -1,0 +1,91 @@
+%DIN 5008 (issue March 2020) cover letter template
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[a4paper,left=2.5cm,right=2cm,top=2.7cm,bottom=2cm]{geometry}
+%"showframe" shows a helpful frame
+%Form A has letter head hight: 27 mm
+%Form B has letter head hight: 45 mm
+\usepackage[ddmmyyyy]{datetime}
+%Allows using the "\today" command to insert today's date in a particular format
+\usepackage{times}
+%sets Times New Roman as the font
+\usepackage[absolute,overlay]{textpos}
+%\begin{textblock*}{〈hsize〉}[〈ho〉,〈vo〉](〈hpos〉,〈vpos〉)
+%\end{textblock*}
+%"showboxes" displays the boxes around the text
+%REMARK: [0,0] indicating the top left corner of the box, [0.5,0.5] the middle, [0,1] the bottom left and so on
+\usepackage[german]{babel}
+\usepackage{lipsum}
+%Generates dummy text
+\usepackage{ragged2e}
+%Package for aligning text
+\usepackage{setspace}
+%Allows to set linespacing
+
+\renewcommand{\dateseparator}{.}
+%Removes seperation via "/" and uses "." instead
+
+\pagestyle{empty}
+%Removes page number
+
+%\singlespacing
+%Single line spacing, i.e. spacing of 1.0
+
+\begin{document}
+%
+%Recipient address
+\begin{textblock*}{8.5cm}[0,0](2.5cm,2.7cm)%{〈hsize〉}[〈ho〉,〈vo〉](〈hpos〉,〈vpos〉)
+\vspace{1mm}
+\begin{spacing}{1}
+\scriptsize
+\noindent Erste Zeile\\
+Zweite Zeile\\
+Dritte Zeile\\
+Vierte Zeile\\
+Max Mustermann$\cdot$Musterstraße 1337$\cdot$12345 Musterstadt
+\end{spacing}
+\vspace{2mm}
+\noindent Frau\\
+Marie Musterfrau\\
+Musterstraße 2448\\
+67890 Musterstadt\\
+Fünfte Zeile\\
+Sechste Zeile
+\end{textblock*}
+%
+%Sender adress
+\begin{textblock*}{7.5cm}[0,0](12.5cm,3.2cm)
+\noindent
+Max Mustermann\\
+Musterstraße 1337\\
+67890 Musterstadt\\
+~\\
+1337 11235813\\
+max@mustermann.de
+\end{textblock*}
+%
+%Date
+\begin{textblock*}{7.5cm}[0,1](12.5cm,8.7cm)
+~\\
+\noindent\today
+\end{textblock*}
+%
+%Subject and text
+\begin{textblock*}{16.5cm}[0,0](2.5cm,9.546cm)
+\RaggedRight
+\noindent
+Bewerbung als Musterangestelter\\
+~\\
+~\\
+Sehr geehrte Frau Marie Musterfrau,\\
+~\\
+\lipsum[1]\\
+~\\
+\lipsum[1]\\
+~\\
+Mit freundlichen Gr\"ußen
+\end{textblock*}
+%
+\end{document}
+
